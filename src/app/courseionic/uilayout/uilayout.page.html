@@ -1,0 +1,158 @@
+<ion-header>
+    <ion-toolbar color='primary'>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Ionic-版面UI元件</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-content>
+      版面元件用於擺放上一節常用UI元件，版面元件將包含ion-card(卡片)、ion-grid(格子版面)、ion-list與ion-item(清單與項目)。其他版面元件可參閱<a href='https://ionicframework.com/docs/components' target='_blank'>Ionic官網</a>。
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <h1 style='color:darkviolet'>ion-card(卡片)</h1>
+        卡片為一方型版面包含ion-card-header(卡片抬頭區域)與ion-card-content(卡片內容區域)，ion-card-header(卡片抬頭區域)包含ion-card-title(標題)與ion-card-subtitle(次標題)，並可設定color(顏色)屬性。ion-card-content(卡片內容區域)顯示使用者設定內容，請注意：版面可包含自己或其他版面。原始碼：
+        <pre style='color:indigo'>
+        &lt;ion-card&gt;
+          &lt;ion-card-header&gt;
+            &lt;ion-card-title&gt;南臺校景&lt;/ion-card-title&gt;
+          &lt;/ion-card-header&gt;
+          &lt;ion-card-content&gt;
+            &lt;ion-img src='assets/ionic/uilayout_1.jpg'&gt;&lt;/ion-img&gt;
+          &lt;/ion-card-content&gt;
+        &lt;/ion-card&gt;
+        </pre> 結果如下<br/>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>南臺校景</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src='assets/ionic/uilayout_1.jpg'></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <h1 style='color:darkviolet'>ion-grid(格子版面)</h1>
+        ion-grid(格子版面)如同表格由ion-row(列)與ion-col(欄)所構成，每一列可以包含許多欄，ion-grid(格子版面)中ion-row(列)將現在螢幕寬度畫分成12等分，可藉由設定內容對齊方式align-items-start(靠上對齊)、align-items-center(置中對齊)及align-items-end(靠下對齊)。每一列使用者在ion-col(欄)，屬性size設定該欄寬度，同時可藉由offset屬性設定該欄之前要空多少寬度(1到11)，除此之外可藉由樣式class設定欄內容對齊方式ion-text-start(靠左對齊)、ion-text-center(置中對齊)及ion-text-end(靠右對齊)。。原始碼：
+          <pre style='color:indigo'>
+          &lt;ion-grid&gt;
+            &lt;ion-row&gt;
+              &lt;ion-col style='background-color: cornflowerblue;'&gt;
+                &lt;ion-label color='light'&gt;平均分割兩欄&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+              &lt;ion-col style='background-color: darkorange;'&gt;
+                &lt;ion-label color='light'&gt;平均分割兩欄&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row&gt;
+              &lt;ion-col size='4' style='background-color: cornflowerblue;'&gt;
+                &lt;ion-label color='light'&gt;左1/3&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+              &lt;ion-col style='background-color: darkorange;'&gt;
+                &lt;ion-label color='light'&gt;右2/3&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row&gt;
+              &lt;ion-col offset='4' style='background-color: cornflowerblue;'&gt;
+                &lt;ion-label color='light'&gt;左空1/3&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row&gt;
+              &lt;ion-col class='ion-text-center' style='background-color: cornflowerblue;'&gt;
+                &lt;ion-label color='light'&gt;左欄置中對齊&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+              &lt;ion-col class='ion-text-right' style='background-color: darkorange;'&gt;
+                &lt;ion-label color='light'&gt;右欄靠右對齊&lt;/ion-label&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/ion-grid&gt;
+          &lt;ion-card&gt;
+          </pre> 結果如下<br/>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>格子版面</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col style='background-color: cornflowerblue;'>
+                    <ion-label color='light'>平均分割兩欄</ion-label>
+                  </ion-col>
+                  <ion-col style='background-color: darkorange;'>
+                      <ion-label color='light'>平均分割兩欄</ion-label>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size='4' style='background-color: cornflowerblue;'>
+                    <ion-label color='light'>左1/3</ion-label>
+                  </ion-col>
+                  <ion-col style='background-color: darkorange;'>
+                      <ion-label color='light'>右2/3</ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col offset='4' style='background-color: cornflowerblue;'>
+                    <ion-label color='light'>左空1/3</ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class='ion-text-center' style='background-color: cornflowerblue;'>
+                    <ion-label color='light'>左欄置中對齊</ion-label>
+                  </ion-col>
+                  <ion-col class='ion-text-right' style='background-color: darkorange;'>
+                    <ion-label color='light'>右欄靠右對齊</ion-label>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-content>
+            <h1 style='color:darkviolet'>ion-list與ion-item(清單與項目)</h1>
+            ion-list(清單)用於包含項目(ion-item)，清單屬性包含inset(縮排：true、false)與lines(下邊線：full、inset與none)。ion-item(項目)用於設定清單內容，包含ion-item(一般項目)、ion-item-divider(分隔項目)與ion-item-group(群組項目)。<p>
+            ion-item(項目)為項目顯示區域，屬性包含color(顏色)、detail(明細圖式：true或false)、detailIcon(明細圖式名稱)、href(連結位置)、lines(底線：full、inset與none)、routerDirection(路由方向：back、forward或root)。ion-item-divider(分隔項目)一般包含文字，用於區隔不同項目群。ion-item-group(群組項目)將許多項目群組成一個項目。原始碼：
+            <pre style='color:indigo'>
+            
+            </pre> 結果如下<br/>
+            
+          </ion-card-content>
+        </ion-card>
+      
+      
+      
+     
+      
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button [routerLink]="['/uicomponents']">
+      <ion-icon name="arrow-dropleft" style='font-size:2.5em;'></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  </ion-content>
+  <ion-footer class='ion-no-padding'>
+  <ion-toolbar class='myfooter'>
+    <ion-grid class='ion-no-padding'>
+      <ion-row class='ion-no-padding'>
+        <ion-col col-6 class='ion-no-padding'>
+          <ion-button expand='full' size='large' color='danger' [routerLink]="['/ionichome']">
+            Ionic
+          </ion-button>
+        </ion-col>
+        <ion-col col-6 class='ion-no-padding'>
+          <ion-button expand='full' size='large' color='danger' [routerLink]="['/flutterhome']">
+            Flutter
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+  </ion-footer>
+  

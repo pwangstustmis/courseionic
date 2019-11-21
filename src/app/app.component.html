@@ -1,3 +1,57 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-split-pane contentId="main-content" disabled>
+  <ion-menu contentId="main-content" type="overlay">
+    <ion-header>
+      <ion-toolbar color='primary'>
+        <ion-title>課程內容</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>        
+      <ion-list>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title style='color:#cb029e'>
+              <h5>軟體安裝與專案架構</h5>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ion-item [routerLink]="['/installionic']">
+            軟體安裝
+          </ion-item>
+          <ion-item [routerLink]="['/projstruct']">
+            專案架構
+          </ion-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title style='color:#cb029e'>
+              <h5>頁面設計與常用UI元件</h5>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ion-item [routerLink]="['/pagedesign']">
+            頁面設計
+          </ion-item>
+          <ion-item [routerLink]="['/uicomponents']">
+            常用UI元件
+          </ion-item>
+          <ion-item [routerLink]="['/uilayout']">
+            版面UI元件
+          </ion-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style='color:#cb029e'>
+                <h5>程式簡介與頁面資料傳遞</h5>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ion-item [routerLink]="['/pagedesign']">
+              TypeScript程式簡介
+            </ion-item>
+            <ion-item [routerLink]="['/uicomponents']">
+              Angular頁面資料傳遞
+            </ion-item>
+          </mat-expansion-panel>
+      </ion-list>       
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+

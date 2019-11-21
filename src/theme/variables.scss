@@ -75,3 +75,25 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+
+@font-face {
+  font-family: 'GenYoMinTW';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/GenYoMinTW-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'GenYoMinTW';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../assets/fonts/GenYoMinTW-SemiBold.ttf');
+}
+
+:root,
+:root[mode=ios],
+:root[mode=md] {
+  --ion-font-family: "GenYoMinTW", "Times New Roman", serif !important;
+  font-family: "GenYoMinTW", "Times New Roman", serif !important;
+
+}

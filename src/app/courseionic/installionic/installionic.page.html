@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar color='primary'>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Ionic-軟體安裝</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+        軟體安裝僅包含將Ionic應用顯示於瀏覽器，涵蓋安裝node.js，安裝完node.js，Windows請開啟Window Powershell視窗，Mac請開啟terminal。
+        <ul>
+          <li>Windows請輸入<ion-label color='danger'>npm install -g ionic</ion-label></li>
+          <li>Mac請輸入<ion-label color='danger'>sudo npm install -g ionic</ion-label></li>
+        </ul>
+        <h1 style='color:darkviolet'>第一個Project</h1>
+        Ionic利用<a href='https://ionicframework.com/docs/cli'>CLI</a>(Command Line Interface)命令來建立project、新增頁面與在瀏覽器顯示等，詳細命令請參閱連結，接下來將說明如何建立空白(blank)、側邊選單(sidemenu)與跳頁按鈕(tabs)範本專案。
+        <ul>
+            <li>空白專案範本，請在命令提示字元視窗請輸入<ion-text color='danger'>ionic start 專案名稱 blank</ion-text>。Ionic CLI中ionic start用於建立專案，請在start之後設定專案名稱，專案名稱不可為中文、不能有空白、不能包含特殊文字、不能全數字，命令最後blank代表空白專案。由於Ionic支援多個開發框架，專案建立時，請選擇Angular最為程式框架，建立完專案後，系統會在現在位置新增一個<ion-text color='danger'>專案名稱</ion-text>的檔案夾，<ion-text color='danger'>請注意：除了建立專案ionic start命令之外，所有其他Ionic CLI命令都必須在專案目錄下執行，使用者可以利用 cd 專案名稱 來進入該專案目錄。</ion-text></li>
+            <li>側邊選單專案範本，請在命令提示字元視窗請輸入<ion-text color='danger'>ionic start 專案名稱 sidemenu</ion-text>。命令最後sidemenu代表側邊選單專案。</li>
+            <li>跳頁選單專案範本，請在命令提示字元視窗請輸入<ion-text color='danger'>ionic start 專案名稱 tabs</ion-text>。命令最後tabs代表跳頁選單專案。</li>
+            <li><ion-text color='danger'>專案建立後，在專案目錄中輸入 ionic serve 會將專案顯示於瀏覽器。請注意ionic serve開啟一本地端伺服器來執行專案，使用者可以在命令提示字元視窗輸入 Ctrl C 來停止伺服器，但是如果使用者沒有停止伺服器，使用者對專案進行任何修改都會即時顯示於瀏覽器。</ion-text></li>
+          </ul>
+    </ion-card-content>
+  </ion-card>
+
+<ion-fab vertical="bottom" horizontal="start" slot="fixed">
+  <ion-fab-button [routerLink]="['/ionichome']">
+    <ion-icon name="arrow-dropleft" style='font-size:2.5em;'></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button [routerLink]="['/projstruct']">
+    <ion-icon name="arrow-dropright" style='font-size:2.5em;'></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>
+<ion-footer class='ion-no-padding'>
+  <ion-toolbar class='myfooter'>
+    <ion-grid class='ion-no-padding'>
+      <ion-row class='ion-no-padding'>
+        <ion-col col-6 class='ion-no-padding'>
+          <ion-button expand='full' size='large' color='danger' [routerLink]="['/ionichome']">
+            Ionic
+          </ion-button>
+        </ion-col>
+        <ion-col col-6 class='ion-no-padding'>
+          <ion-button expand='full' size='large' color='danger' [routerLink]="['/flutterhome']">
+            Flutter
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
